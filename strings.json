@@ -1,0 +1,25 @@
+{
+  "manifest": {
+    "description": "Expose Music Assistant virtual players on stable, persistent HTTP MP3 URLs. Listener connections remain open across track changes, stop and queue end by sending MP3 silence when no MA audio is available."
+  },
+  "config_entries": {
+    "players": {
+      "label": "HTTP stream players",
+      "description": "One player per name, each with its own stable URL under /stream/NAME.mp3. Renaming a player changes its URL."
+    },
+    "http_stream_url": {
+      "label": "Stream URL: {0}"
+    }
+  },
+  "setup_flow": {
+    "players": {
+      "title": "Set up HTTP Stream Player",
+      "description": "Enter a name for each virtual player. Each player gets a stable URL under /stream/NAME.mp3 that web radios, VLC and browsers can tune into."
+    }
+  },
+  "errors": {
+    "no_players": "Enter at least one player name.",
+    "invalid_player_name": "One or more player names contain no letters or digits.",
+    "duplicate_player_url": "Two or more player names result in the same URL."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "player",
+  "domain": "http_stream_player",
+  "name": "HTTP Stream Player",
+  "description": "Expose Music Assistant virtual players on stable, persistent HTTP MP3 URLs. Listener connections remain open across track changes, stop and queue end by sending MP3 silence when no MA audio is available.",
+  "codeowners": ["@meiser79"],
+  "requirements": [],
+  "multi_instance": false,
+  "stage": "beta"
+}

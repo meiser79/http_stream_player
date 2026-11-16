@@ -1,0 +1,25 @@
+{
+  "manifest": {
+    "description": "Stellt virtuelle Music-Assistant-Player unter festen, dauerhaften HTTP-MP3-URLs bereit. Die Verbindungen der Hörer bleiben über Titelwechsel, Stopp und das Ende der Warteschlange hinweg offen, solange kein Audio von MA kommt, wird MP3-Stille gesendet."
+  },
+  "config_entries": {
+    "players": {
+      "label": "HTTP-Stream-Player",
+      "description": "Ein Player pro Name, jeder mit einer eigenen festen URL unter /stream/NAME.mp3. Wird ein Player umbenannt, ändert sich seine URL."
+    },
+    "http_stream_url": {
+      "label": "Stream-URL: {0}"
+    }
+  },
+  "setup_flow": {
+    "players": {
+      "title": "HTTP Stream Player einrichten",
+      "description": "Gib für jeden virtuellen Player einen Namen ein. Jeder Player erhält eine feste URL unter /stream/NAME.mp3, die Webradios, VLC und Browser abspielen können."
+    }
+  },
+  "errors": {
+    "no_players": "Gib mindestens einen Playernamen ein.",
+    "invalid_player_name": "Mindestens ein Playername enthält weder Buchstaben noch Ziffern.",
+    "duplicate_player_url": "Mindestens zwei Playernamen ergeben dieselbe URL."
+  }
+}
